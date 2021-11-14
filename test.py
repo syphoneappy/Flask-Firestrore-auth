@@ -10,7 +10,7 @@ from firebase_admin import firestore , credentials
 config = {
 
 }
-cred = credentials.Certificate("./test-fd4e8-firebase-adminsdk-bjozd-12c862a4a6.json")
+cred = credentials.Certificate("Enter Json Credentials here")
 
 firebase = pyrebase.initialize_app(config)
 
@@ -19,7 +19,7 @@ db = firebase.database();
 auth = firebase.auth();
 
 firebase_admin.initialize_app(cred, {
-  'projectId': "test-fd4e8",
+  'projectId': "your project id",
 })
 
 db = firebase_admin.firestore.client()
