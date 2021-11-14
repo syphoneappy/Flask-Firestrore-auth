@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+  </head>
+  <body>
+    <nav class="#ba68c8 purple lighten-2">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">{{UserName}}</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li class="left"><a href="/update"><span class="material-icons">
+edit
+</span></a></li>
+      <li class="left"><a href="/LogOut">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+    <div class="container">
+      <div class="row">
+        <div class="row col s6">
+          <p>Name:
+            <blockquote>
+            {{UserName}}
+          </blockquote></p>
+            <p>Email:
+              <blockquote>
+              {{user}}
+            </blockquote></p>
+            <p>Date:
+              <blockquote>
+              {{Date}}
+            </blockquote></p>
+            <p>address:
+              <blockquote>
+              {{Address}}
+            </blockquote></p>
+        </div>
+        <div class="row col s6">
+            <img src="{{l}}" alt="" width="250px" height="350px" style="margin-top:10px">
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  </body>
+</html>

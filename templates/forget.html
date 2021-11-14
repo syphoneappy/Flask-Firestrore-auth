@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+      <form class="row" action="/forget" method="post">
+        <div class="row">
+          <div class="col s3"></div>
+          <div class="col s6">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate" name="UserName">
+              <label for="email">Email</label>
+              <span class="helper-text" data-error="wrong" data-success="right">comform email</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4"></div>
+          <div class="col-4 center">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        </div>
+        </div>
+      </form>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <div class="collection">
+      {% for message in messages %}
+        <a href="#!" class="collection-item center red white-text">{{message}}</a>
+      {% endfor %}
+      </div>
+      {% endif %}
+      {% endwith %}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+  </body>
+</html>
